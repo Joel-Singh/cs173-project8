@@ -28,6 +28,10 @@ Complex::Complex() {
 //========================================================
 // Complex(a,b) constructor
 //========================================================
+Complex::Complex(float real, float imaginary) {
+    a = real;
+    b = imaginary;
+}
 
 //========================================================
 // destructor
