@@ -103,9 +103,17 @@ void Complex::setImag(float r) {
     b = r;
 }
 
-//========================================================
+//================================================= 
 // getImag
-//========================================================
+// getter method for b, the imaginary part
+// Parameters:
+//  None 
+// Return Value:
+//  b, the imaginary part
+//================================================= 
+float Complex::getImag() const {
+    return b;
+}
 
 //========================================================
 // assignment operator

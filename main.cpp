@@ -81,6 +81,7 @@ int main ( void )
     cout << "(Should be 3+99i) " << c10 << endl;
 
     cout << "(Should be 3) " << c10.getReal() << endl;
+    cout << "(Should be 99) " << c10.getImag() << endl;
 
     return 0;
 }
