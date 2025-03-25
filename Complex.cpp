@@ -146,11 +146,29 @@ istream& operator>> ( istream& is, Complex& c )
 //  r: The complex number to print
 // Return Value:
 //  Returns the ostream object
-// NOTES:
-//  Doesn't handle the special cases, see ComplexADT.pdf for the special cases
 //================================================= 
 ostream& operator<< ( ostream& os, const Complex& c )
 {
-    os << c.a << " + " << c.b << "i";
+    if (c.a == 0 && c.b == 0) {
+        cout << "0";
+        return os;
+    }
+
+    if (c.a != 0){
+        os << c.a;
+    }
+
+    if (c.a != 0 && c.b != 0 && c.b > 0) {
+        os << "+";
+    }
+
+    if (c.b != 0) {
+        if (c.b != 1) {
+            os << c.b;
+        }
+
+        os << "i";
+    }
+
     return os;
 }
