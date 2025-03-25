@@ -169,9 +169,17 @@ bool Complex::operator== ( const Complex& c ) const {
     return a == c.a && b == c.b;
 }
 
-//========================================================
+//================================================= 
 // inequality operator
-//========================================================
+// Tests if two complex numbers are not equa 
+// Parameters:
+//  c: The other complex to compare 
+// Return Value:
+//  bool
+//================================================= 
+bool Complex::operator!= (const Complex& c ) const {
+    return !(*this == c);
+}
 
 //================================================= 
 // overload >> for cin

@@ -92,9 +92,11 @@ int main ( void )
     // equality tests
     Complex c11(5, 4), c12(5, 4);
     cout << "(Should be true, i.e 1) " << (c11 == c12) << endl;
+    cout << "(Should be false, i.e 0) " << (c11 != c12) << endl;
 
     Complex c13(5, 9), c14(5, 4);
     cout << "(Should be false, i.e 0) " << (c13 == c14) << endl;
+    cout << "(Should be true, i.e 1) " << (c13 != c14) << endl;
 
     return 0;
 }
