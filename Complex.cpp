@@ -79,9 +79,17 @@ void Complex::setReal(float r) {
 }
 
 
-//========================================================
+//================================================= 
 // getReal access method
-//========================================================
+// getter method for a
+// Parameters:
+//  None 
+// Return Value:
+//  Returns the real part of the complex
+//================================================= 
+float Complex::getReal() const {
+    return a;
+}
 
 //========================================================
 // setImag

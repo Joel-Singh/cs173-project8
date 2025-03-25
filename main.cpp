@@ -77,6 +77,7 @@ int main ( void )
     c10.setReal(3);
     cout << "(Should be 3+3i) " << c10 << endl;
 
+    cout << "(Should be 3) " << c10.getReal() << endl;
 
     return 0;
 }
