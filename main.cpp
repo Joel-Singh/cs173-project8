@@ -16,11 +16,7 @@ int main ( void )
     Complex c1(4,2), c2(3.1,-1), c3;
     cout << "c1 = " << c1 << endl;
     cout << "c2 = " << c2 << endl;
-    cout << "(Should be '0' because a and b are 0) c3 = " << c3 << endl;
-    cout << "(Should be just 4i because a is 0) c3 = " << Complex(0, 4) << endl;
-    cout << "(Should be just 6 because b is 0) c3 = " << Complex(6, 0) << endl;
-    cout << "(Should be with minus sign) c3 = " << Complex(3, -3) << endl;
-    cout << "(Should be 5a+i because b is 1) c3 = " << Complex(5, 1) << endl;
+    cout << "(Should be '0' because a and b are 0 from default constructor) c3 = " << c3 << endl;
     /**/
     /*Complex c9(4);*/
     /*cout << "c9 = " << c9 << endl;*/
@@ -65,6 +61,12 @@ int main ( void )
     cout << "Enter c3: ";
     cin >> c3;
     cout << c3 << endl;
+
+    // cout tests
+    cout << "(Should be just 4i because a is 0) c3 = " << Complex(0, 4) << endl;
+    cout << "(Should be just 6 because b is 0) c3 = " << Complex(6, 0) << endl;
+    cout << "(Should be with minus sign) c3 = " << Complex(3, -3) << endl;
+    cout << "(Should be 5+i because b is 1) c3 = " << Complex(5, 1) << endl;
 
     return 0;
 }
