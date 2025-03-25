@@ -1,5 +1,5 @@
 //========================================================
-// put all group names here
+// Joel Singh, Jamie Barber, Violet Eck
 // Complex.cpp
 // Spring 2025
 // This file contains the class methods for the
