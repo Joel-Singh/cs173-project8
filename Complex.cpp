@@ -157,9 +157,17 @@ Complex Complex::operator= ( const Complex& c ) {
 // abs
 //========================================================
 
-//========================================================
+//================================================= 
 // equality operator
-//========================================================
+// Tests if two complex numbers are equal
+// Parameters:
+//  c: The other complex to compare 
+// Return Value:
+//  Boolean
+//================================================= 
+bool Complex::operator== ( const Complex& c ) const {
+    return a == c.a && b == c.b;
+}
 
 //========================================================
 // inequality operator

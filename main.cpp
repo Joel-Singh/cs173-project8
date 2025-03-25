@@ -89,5 +89,12 @@ int main ( void )
 
     cout << "(Should be 6+8i) " << new_c << endl;
 
+    // equality tests
+    Complex c11(5, 4), c12(5, 4);
+    cout << "(Should be true, i.e 1) " << (c11 == c12) << endl;
+
+    Complex c13(5, 9), c14(5, 4);
+    cout << "(Should be false, i.e 0) " << (c13 == c14) << endl;
+
     return 0;
 }
