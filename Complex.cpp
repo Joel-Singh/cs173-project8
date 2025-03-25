@@ -68,7 +68,7 @@ Complex::~Complex ()
 
 //================================================= 
 // setReal access method
-// setter method for a
+// setter method for a, the real part
 // Parameters:
 //  r: the real number to set a to 
 // Return Value:
@@ -91,9 +91,17 @@ float Complex::getReal() const {
     return a;
 }
 
-//========================================================
-// setImag
-//========================================================
+//================================================= 
+// setImage
+// setter method for b, the imaginary part
+// Parameters:
+//  r: a float to set b 
+// Return Value:
+//  Void
+//================================================= 
+void Complex::setImag(float r) {
+    b = r;
+}
 
 //========================================================
 // getImag

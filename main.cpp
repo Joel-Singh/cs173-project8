@@ -77,6 +77,9 @@ int main ( void )
     c10.setReal(3);
     cout << "(Should be 3+3i) " << c10 << endl;
 
+    c10.setImag(99);
+    cout << "(Should be 3+99i) " << c10 << endl;
+
     cout << "(Should be 3) " << c10.getReal() << endl;
 
     return 0;
