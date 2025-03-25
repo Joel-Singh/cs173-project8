@@ -13,10 +13,10 @@
 int main ( void )
 {
     // basic constructor tests
-    /*Complex c1(4,2), c2(3.1,-1), c3;*/
-    /*cout << "c1 = " << c1 << endl;*/
-    /*cout << "c2 = " << c2 << endl;*/
-    /*cout << "c3 = " << c3 << endl;*/
+    Complex c1(4,2), c2(3.1,-1), c3;
+    cout << "c1 = " << c1 << endl;
+    cout << "c2 = " << c2 << endl;
+    cout << "c3 = " << c3 << endl;
     /**/
     /*Complex c9(4);*/
     /*cout << "c9 = " << c9 << endl;*/
@@ -57,10 +57,10 @@ int main ( void )
     /*// abs test*/
     /*cout << "c1.abs() = " << c1.abs() << endl;*/
     /**/
-    /*// cin >> test*/
-    /*cout << "Enter c3: ";*/
-    /*cin >> c3;*/
-    /*cout << c3 << endl;*/
+    // cin >> test
+    cout << "Enter c3: ";
+    cin >> c3;
+    cout << c3 << endl;
 
     return 0;
 }
