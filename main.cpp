@@ -62,9 +62,9 @@ int main ( void )
     /*cout << "c1.abs() = " << c1.abs() << endl;*/
     /**/
     // cin >> test
-    cout << "Enter c3: ";
-    cin >> c3;
-    cout << c3 << endl;
+    /*cout << "Enter c3: ";*/
+    /*cin >> c3;*/
+    /*cout << c3 << endl;*/
 
     // cout tests
     cout << "(Should be just 4i because a is 0) c3 = " << Complex(0, 4) << endl;
