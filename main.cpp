@@ -83,5 +83,11 @@ int main ( void )
     cout << "(Should be 3) " << c10.getReal() << endl;
     cout << "(Should be 99) " << c10.getImag() << endl;
 
+    // assignment tests
+    Complex original(6, 8);
+    Complex new_c = original;
+
+    cout << "(Should be 6+8i) " << new_c << endl;
+
     return 0;
 }

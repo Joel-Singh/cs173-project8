@@ -118,6 +118,11 @@ float Complex::getImag() const {
 //========================================================
 // assignment operator
 //========================================================
+Complex Complex::operator= ( const Complex& c ) {
+    a = c.a;
+    b = c.b;
+    return *this;
+}
 
 //========================================================
 // addition operators
