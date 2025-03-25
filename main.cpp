@@ -17,6 +17,10 @@ int main ( void )
     cout << "c1 = " << c1 << endl;
     cout << "c2 = " << c2 << endl;
     cout << "(Should be '0' because a and b are 0 from default constructor) c3 = " << c3 << endl;
+
+    // copy constructor test
+    Complex to_copy(5, 8);
+    cout << "(Should be '5+8i') " << Complex(to_copy) << endl;
     /**/
     /*Complex c9(4);*/
     /*cout << "c9 = " << c9 << endl;*/

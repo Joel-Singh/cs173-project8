@@ -21,9 +21,19 @@ Complex::Complex() {
 }
 
 
-//========================================================
+//================================================= 
 // copy constructor
-//========================================================
+// Initializes a Complex, copying the a and b of another
+// Parameters:
+//  c: A Complex 
+// Return Value:
+//  none
+//================================================= 
+Complex::Complex( const Complex& c )
+{
+    a = c.a;
+    b = c.b;
+}
 
 //========================================================
 // Complex(a,b) constructor
