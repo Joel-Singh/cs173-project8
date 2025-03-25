@@ -7,6 +7,7 @@
 //========================================================
 
 #include "Complex.h"
+#include <functional>
 #include <string.h>
 #include <iostream>
 #include <cmath>
@@ -65,9 +66,18 @@ Complex::~Complex ()
 {
 }
 
-//========================================================
+//================================================= 
 // setReal access method
-//========================================================
+// setter method for a
+// Parameters:
+//  r: the real number to set a to 
+// Return Value:
+//  Void
+//================================================= 
+void Complex::setReal(float r) {
+    a = r;
+}
+
 
 //========================================================
 // getReal access method

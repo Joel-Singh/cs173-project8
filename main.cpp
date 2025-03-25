@@ -72,5 +72,11 @@ int main ( void )
     cout << "(Should be with minus sign) c3 = " << Complex(3, -3) << endl;
     cout << "(Should be 5+i because b is 1) c3 = " << Complex(5, 1) << endl;
 
+    // setter and getter tests
+    Complex c10(5, 3);
+    c10.setReal(3);
+    cout << "(Should be 3+3i) " << c10 << endl;
+
+
     return 0;
 }
