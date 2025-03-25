@@ -115,9 +115,14 @@ float Complex::getImag() const {
     return b;
 }
 
-//========================================================
+//================================================= 
 // assignment operator
-//========================================================
+// Assigns a complex number to another
+// Parameters:
+//  c: The complex number to essentially copy 
+// Return Value:
+//  Complex
+//================================================= 
 Complex Complex::operator= ( const Complex& c ) {
     a = c.a;
     b = c.b;
