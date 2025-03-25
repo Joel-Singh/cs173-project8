@@ -81,11 +81,11 @@ void Complex::setReal(float r) {
 
 //================================================= 
 // getReal access method
-// getter method for a
+// getter method for a, the real part
 // Parameters:
 //  None 
 // Return Value:
-//  Returns the real part of the complex
+//  Returns a, the real part
 //================================================= 
 float Complex::getReal() const {
     return a;
