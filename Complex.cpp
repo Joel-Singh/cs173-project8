@@ -181,7 +181,6 @@ bool Complex::operator!= (const Complex& c ) const {
 // Return Value:
 //  Returns the istream object
 // NOTES:
-//   Only works for inputs in the form of "a+bi" with only single digits, nothing else. see ComplexADT.pdf for the other cases
 //   Assumes non-erroneous input, (non-erroneous being what is descriibed in ComplexADT.pdf)
 //   Referenced https://en.cppreference.com/w/cpp/regex/regex_search for regex
 //================================================= 
