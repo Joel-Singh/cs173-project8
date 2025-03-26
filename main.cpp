@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include "Complex.h"
 
-const bool RUN_CIN_TESTS = false;
+const bool RUN_CIN_TESTS = true;
 
 int main ( void )
 {
@@ -65,9 +65,54 @@ int main ( void )
     /**/
     // cin >> test
     if (RUN_CIN_TESTS) {
-        cout << "Enter c3: ";
+        cout << "Enter complex in the form of 'bi': ";
         cin >> c3;
         cout << c3 << endl;
+
+        cout << "Enter complex in the form of '-bi': ";
+        cin >> c3;
+        cout << c3 << endl;
+
+        cout << "Enter complex in the form of '+bi': ";
+        cin >> c3;
+        cout << c3 << endl;
+
+        cout << "Enter complex in the form of 'a': ";
+        cin >> c3;
+        cout << c3 << endl;
+
+        cout << "Enter complex in the form of '-a': ";
+        cin >> c3;
+        cout << c3 << endl;
+
+        cout << "Enter complex in the form of '+a': ";
+        cin >> c3;
+        cout << c3 << endl;
+
+        cout << "Enter complex in the form of 'a+bi': ";
+        cin >> c3;
+        cout << c3 << endl;
+
+        cout << "Enter complex in the form of '-a+bi': ";
+        cin >> c3;
+        cout << c3 << endl;
+
+        cout << "Enter complex in the form of 'a+-bi': ";
+        cin >> c3;
+        cout << c3 << endl;
+
+        cout << "Enter complex in the form of '-a+-bi': ";
+        cin >> c3;
+        cout << c3 << endl;
+
+        cout << "Enter complex in the form of 'a-bi': ";
+        cin >> c3;
+        cout << c3 << endl;
+
+        cout << "Enter complex in the form of '-a-bi': ";
+        cin >> c3;
+        cout << c3 << endl;
+
     }
 
     // cout tests

@@ -11,6 +11,7 @@
 #include <string.h>
 #include <iostream>
 #include <cmath>
+#include <regex>
 using namespace std;
 
 //========================================================
@@ -191,17 +192,56 @@ bool Complex::operator!= (const Complex& c ) const {
 //  Returns the istream object
 // NOTES:
 //   Only works for inputs in the form of "a+bi" with only single digits, nothing else. see ComplexADT.pdf for the other cases
+//   Assumes non-erroneous input, (non-erroneous being what is descriibed in ComplexADT.pdf)
+//   Referenced https://en.cppreference.com/w/cpp/regex/regex_search for regex
 //================================================= 
 istream& operator>> ( istream& is, Complex& c )
 {
     string s, real_str, imaginary_str;
 
     is >> s;  // read in the rational as string
+    
+    // Replace +- with -
+    int plus_and_neg_operator = s.find("+-");
+    if (plus_and_neg_operator != std::string::npos) {
+        s.replace(plus_and_neg_operator, 2, "-");
+    }
 
-    real_str = s.at(0);
-    imaginary_str = s.at(2);
+    // Create complex if there is only a
+    bool is_only_a = s.find("i") == std::string::npos;
+    if (is_only_a) {
+        c.a = stoi(s);
+        c.b = 0;
 
-    // convert strings to ints
+        return is;
+    }
+
+    // Create complex if there is only b
+    bool is_only_b = false;
+    string s_copy = s;
+    if (s.at(0) == '-' || s.at(0) == '+') {
+        s_copy.erase(0, 1);
+    }
+
+    is_only_b = s_copy.find("+") == std::string::npos && s_copy.find("-") == std::string::npos;
+
+    if (is_only_b) {
+        c.a = 0;
+        c.b = stoi(s);
+
+        return is;
+    }
+
+
+    // Create complex with an a and b part
+    int operator_position = s.find_last_of("+");
+    if (operator_position == std::string::npos) {
+        operator_position = s.find_last_of("-");
+    }
+
+    real_str = s.substr(0, operator_position);
+    imaginary_str = s.substr(operator_position);
+
     c.a = stoi(real_str);
     c.b = stoi(imaginary_str);
 
