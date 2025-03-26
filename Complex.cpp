@@ -45,16 +45,6 @@ Complex::Complex(float real, float imaginary) {
     b = imaginary;
 }
 
-//======================================================
-// destructor
-// Does nothing useful here.  Placeholder for future
-// cleanup if necessary. Destructors are more interesting
-// when we have dynamic data.
-// PARAMETERS:
-// none
-// RETURN VALUE:
-// none
-//======================================================
 //================================================= 
 // destructor
 // Does nothing useful here because we have no dynamic data. Placeholder for future cleanup if necessary.
