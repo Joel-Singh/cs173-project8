@@ -11,6 +11,7 @@
 #include "Complex.h"
 
 const bool RUN_JOEL_TESTS = false;
+const bool RUN_VIOLET_TESTS = false;
 
 int main ( void )
 {
@@ -33,27 +34,31 @@ int main ( void )
     /**/
     /**/
     /*// addition tests*/
-    c3 = c1 + c2;
-    cout << c1 << endl << c2 << endl << "c3 = c1+c2 = " << c3 << endl;
-    /**/
-    c3 = c1 + 7;
-    cout << c1 << endl << "c3 = c1+7 = " << c3 << endl;
-    /**/
-    float test = 7.7;
-    c3 = c1 + test;
-    cout << c1 << endl << "c3 = c1+7.7 = " << c3 << endl;
-    /**/
-    /*// subtraction tests*/
-    c3 = c1 - c2;
-    cout << c1 << endl << c2 << endl << "c3 = c1-c2 = " << c3 << endl;
+    if (RUN_VIOLET_TESTS) {
+        c3 = c1 + c2;
+        cout << c1 << endl << c2 << endl << "c3 = c1+c2 = " << c3 << endl;
+        /**/
+        c3 = c1 + 7;
+        cout << c1 << endl << "c3 = c1+7 = " << c3 << endl;
+        /**/
+        float test = 7.7;
+        c3 = c1 + test;
+        cout << c1 << endl << "c3 = c1+7.7 = " << c3 << endl;
+        /**/
+        /*// subtraction tests*/
+        c3 = c1 - c2;
+        cout << c1 << endl << c2 << endl << "c3 = c1-c2 = " << c3 << endl;
+    }
     /**/
     /*// multiplication*/
     /*c3 = c1 * c2;*/
     /*cout << "c3 = c1*c2 = " << c3 << endl;*/
     /**/
     /*// conjugate test*/
-    c3 = ~c1;
-    cout << c1 << endl << "c3 = ~c1 = " << c3 << endl;
+    if (RUN_VIOLET_TESTS) {
+        c3 = ~c1;
+        cout << c1 << endl << "c3 = ~c1 = " << c3 << endl;
+    }
     /**/
     /*// division test*/
     /*c3 = c1 / c2;*/
