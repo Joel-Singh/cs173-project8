@@ -122,12 +122,53 @@ Complex Complex::operator= ( const Complex& c ) {
 
 //========================================================
 // addition operators
+// Adds a an int, float, or complex number to a complex number
+// Parameters: 
+//  c: A complex number
+//  f: A float
+//  i: An int
+// Return Value:
+//  Complex
 //========================================================
-
+Complex Complex::operator+ (const Complex& c) const {
+    return Complex(c.a + a, c.b + b);
+}
+Complex Complex::operator+ (float f) const {
+    return Complex(f + a, b);
+}
+Complex Complex::operator+ (int i) const {
+    return Complex(i + a, b);
+}
 //========================================================
 // subtraction operators
+// Subtracts an int, float, or complex number from the complex number
+// Parameters:
+//  c: A complex number
+//  f: A float
+//  i: An int
+// Return Value:
+//  Complex
 //========================================================
-
+Complex Complex::operator- (const Complex& c) const {
+    return Complex(a - c.a, b - c.b);
+}
+Complex Complex::operator- (float f) const {
+    return Complex(a - f, b);
+}
+Complex Complex::operator- (int i) const {
+    return Complex(a - i, b);
+}
+//========================================================
+// negation operator
+// Returns the negative form of the complex number
+// Parameters:
+//  none
+// Return Value:
+//  Complex
+//========================================================
+Complex Complex::operator- () const {
+    return Complex(-a,-b);
+}
 //========================================================
 // multiplication operators
 //========================================================
@@ -142,8 +183,15 @@ Complex Complex::operator= ( const Complex& c ) {
 
 //========================================================
 // operator~
+// Returns the complex conjugate of the complex number
+// Parameters:
+//  none
+// Return Value:
+//  Complex
 //========================================================
-
+Complex Complex::operator~() const {
+    return Complex(a,-b);
+}
 //========================================================
 // abs
 //========================================================
@@ -222,7 +270,7 @@ istream& operator>> ( istream& is, Complex& c )
     }
 
 
-    // Create complex with an a and b part
+   // Create complex with an a and b part
     int operator_position = s.find_last_of("+");
     if (operator_position == std::string::npos) {
         operator_position = s.find_last_of("-");
