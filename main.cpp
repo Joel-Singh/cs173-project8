@@ -13,6 +13,9 @@
 const bool RUN_JOEL_TESTS = false;
 const bool RUN_VIOLET_TESTS = false;
 
+const bool RUN_EXPONENTIATION_TESTS = false;
+const bool RUN_MULTIPLICATION_TESTS = false;
+
 int main ( void )
 {
     // basic constructor tests
@@ -51,8 +54,9 @@ int main ( void )
     }
     /**/
     /*// multiplication*/
-    /*c3 = c1 * c2;*/
-    /*cout << "c3 = c1*c2 = " << c3 << endl;*/
+    if (RUN_MULTIPLICATION_TESTS) {
+        cout << "(3 + 5i)(9 + 2i) is " << Complex(3, 5)*Complex(9, 2) <<  ", should be (17 + 51i)" << endl;
+    }
     /**/
     /*// conjugate test*/
     if (RUN_VIOLET_TESTS) {
@@ -65,9 +69,14 @@ int main ( void )
     /*cout << "c3 = c1/c2 = " << c3 << endl;*/
     /**/
     /*// exponentiation test*/
-    /*c3 = c1^3;*/
-    /*cout << c1 << "^" << 3 << " = " << c3 << endl;*/
-    /**/
+    if (RUN_EXPONENTIATION_TESTS) {
+        cout << (Complex(2, 3)^0) << " Should be 1" << endl;
+        cout << (Complex(2, 3)^1) << " Should be 2+3i" << endl;
+        cout << (Complex(2, 3)^2) << " Should be -5+12i" << endl;
+        cout << (Complex(2, 3)^3) << " Should be -46+9i" << endl;
+        cout << (Complex(2, 3)^4) <<  " Should be -199-120i" << endl;
+    }
+
     /*// abs test*/
     /*cout << "c1.abs() = " << c1.abs() << endl;*/
     /**/

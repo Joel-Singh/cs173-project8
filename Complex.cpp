@@ -212,7 +212,25 @@ Complex Complex::operator/ (int i) const {
 }
 //========================================================
 // exponentiation
+// Implements exponentiation of complex numbers by >=0 integers
+// Parameters:
+//  p: int to raise to 
+// Return Value:
+//  returns a Complex
+//  NOTE: Does not work with negative integers currently
 //========================================================
+Complex Complex::operator^(int p) const {
+    if (p == 0) {
+        return Complex(1, 0);
+    }
+
+    Complex new_complex(*this);
+    for (int i = 1; i < p; i++) {
+        new_complex = new_complex * (*this);
+    }
+
+    return new_complex;
+}
 
 //========================================================
 // operator~
