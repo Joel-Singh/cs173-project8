@@ -220,7 +220,7 @@ Complex Complex::operator/ (int i) const {
 //  NOTE: Does not work with negative integers currently
 //========================================================
 Complex Complex::operator^(int p) const {
-    if (p == 0) {
+    if (p == 0) { // Anything to the power of 0 is just 1
         return Complex(1, 0);
     }
 
