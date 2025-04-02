@@ -171,12 +171,47 @@ Complex Complex::operator- () const {
 }
 //========================================================
 // multiplication operators
+// Multiplies an int, float, or complex number with the complex number
+// Parameters:
+//  c: A complex number
+//  f: A float
+//  i: An int
+// Return Value:
+//  Complex
 //========================================================
-
+Complex Complex::operator* (const Complex& c) const {
+    double real = a * c.a - b * c.b;
+    double second = a * c.b + b * c.a;
+    return Complex(real, second);
+}
+Complex Complex::operator* (float f) const {
+    return Complex(a * f, b * f);
+}
+Complex Complex::operator* (int i) const {
+    return Complex(a * i, b * i);
+}
 //========================================================
 // division operators
+// Divides an int, float, or complex number by the complex number
+// Parameters:
+//  c: A complex number
+//  f: A float
+//  i: An int
+// Return Value:
+//  Complex
 //========================================================
-
+Complex Complex::operator/ (const Complex& c) const {
+    double denominator = c.a * c.a + c.b * c.b;
+    double real = (a * c.a + b * c.b) / denominator;
+    double second = (b * c.a - a * c.b) / denominator;
+    return Complex(real, second);
+}
+Complex Complex::operator/ (float f) const {
+    return Complex(a / f, b / f);
+}
+Complex Complex::operator/ (int i) const {
+    return Complex(a / i, b / i); 
+}
 //========================================================
 // exponentiation
 //========================================================
@@ -193,9 +228,16 @@ Complex Complex::operator~() const {
     return Complex(a,-b);
 }
 //========================================================
-// abs
+// Absolute value function
+// Returns the absolute value (magnitude) of the complex number
+// Parameters:
+//  none
+// Return Value:
+//  double
 //========================================================
-
+double Complex::operator~ () const {
+    return std::sqrt(a * a + b * b);
+}
 //================================================= 
 // equality operator
 // Tests if two complex numbers are equal
