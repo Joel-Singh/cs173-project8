@@ -7,6 +7,7 @@
 //========================================================
 
 #include "Complex.h"
+#include <cstdlib>
 #include <functional>
 #include <string.h>
 #include <iostream>
@@ -217,9 +218,11 @@ Complex Complex::operator/ (int i) const {
 //  p: int to raise to 
 // Return Value:
 //  returns a Complex
-//  NOTE: Does not work with negative integers currently
-//========================================================
+//================================================= 
 Complex Complex::operator^(int p) const {
+    bool is_negative = p < 0;
+    p = std::abs(p);
+
     if (p == 0) { // Anything to the power of 0 is just 1
         return Complex(1, 0);
     }
@@ -227,6 +230,12 @@ Complex Complex::operator^(int p) const {
     Complex new_complex(*this);
     for (int i = 1; i < p; i++) {
         new_complex = new_complex * (*this);
+    }
+
+    if (is_negative) { // If less than zero, we have 1 over the complex to the p power. We can multiply the top and bottom by the conjugate to get rid of the fraction.
+        float denominator = (new_complex*(~new_complex)).a;
+
+        return Complex((~new_complex).a/denominator, (~new_complex).b/denominator);
     }
 
     return new_complex;
