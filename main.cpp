@@ -79,7 +79,7 @@ int main ( void )
         cout << (Complex(2, 3)^1) << " Should be 2+3i" << endl;
         cout << (Complex(2, 3)^2) << " Should be -5+12i" << endl;
         cout << (Complex(2, 3)^3) << " Should be -46+9i" << endl;
-        cout << (Complex(2, 3)^4) <<  " Should be -199-120i" << endl;
+        cout << (Complex(2, 3)^4) <<  " Should be -119-120i" << endl;
 
         cout << (Complex(2, 3)^-1) <<  " Should be 0.153-0.23i" << endl;
         cout << (Complex(2, 3)^-2) <<  " Should be -0.029-0.071i" << endl;
