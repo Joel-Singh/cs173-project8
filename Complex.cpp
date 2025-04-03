@@ -14,6 +14,7 @@ using namespace std;
 
 //========================================================
 // default constructor
+// Initializes a default complex to have components of 0
 //========================================================
 Complex::Complex() {
     a = 0;
