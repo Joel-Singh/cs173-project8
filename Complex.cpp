@@ -180,8 +180,8 @@ Complex Complex::operator- () const {
 //  Complex
 //========================================================
 Complex Complex::operator* (const Complex& c) const {
-    double real = a * c.a - b * c.b;
-    double second = a * c.b + b * c.a;
+    float real = a * c.a - b * c.b;
+    float second = a * c.b + b * c.a;
     return Complex(real, second);
 }
 Complex Complex::operator* (float f) const {
@@ -201,9 +201,9 @@ Complex Complex::operator* (int i) const {
 //  Complex
 //========================================================
 Complex Complex::operator/ (const Complex& c) const {
-    double denominator = c.a * c.a + c.b * c.b;
-    double real = (a * c.a + b * c.b) / denominator;
-    double second = (b * c.a - a * c.b) / denominator;
+    float denominator = c.a * c.a + c.b * c.b;
+    float real = (a * c.a + b * c.b) / denominator;
+    float second = (b * c.a - a * c.b) / denominator;
     return Complex(real, second);
 }
 Complex Complex::operator/ (float f) const {
