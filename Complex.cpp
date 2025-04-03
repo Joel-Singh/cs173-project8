@@ -8,11 +8,8 @@
 
 #include "Complex.h"
 #include <cstdlib>
-#include <functional>
-#include <string.h>
 #include <iostream>
 #include <cmath>
-#include <regex>
 using namespace std;
 
 //========================================================
