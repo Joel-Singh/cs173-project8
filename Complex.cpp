@@ -180,9 +180,7 @@ Complex Complex::operator- () const {
 //  Complex
 //========================================================
 Complex Complex::operator* (const Complex& c) const {
-    float real = a * c.a - b * c.b;
-    float second = a * c.b + b * c.a;
-    return Complex(real, second);
+    return Complex(a * c.a - b * c.b, a * c.b + b * c.a);
 }
 Complex Complex::operator* (float f) const {
     return Complex(a * f, b * f);
@@ -235,7 +233,7 @@ Complex Complex::operator~() const {
 // Return Value:
 //  double
 //========================================================
-double Complex::operator~ () const {
+float Complex::abs() const {
     return std::sqrt(a * a + b * b);
 }
 //================================================= 
