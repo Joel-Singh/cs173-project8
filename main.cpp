@@ -15,6 +15,7 @@ const bool RUN_VIOLET_TESTS = false;
 
 const bool RUN_EXPONENTIATION_TESTS = false;
 const bool RUN_MULTIPLICATION_TESTS = false;
+const bool RUN_DIVISION_TESTS = false;
 
 int main ( void )
 {
@@ -65,9 +66,13 @@ int main ( void )
     }
     /**/
     /*// division test*/
-    /*c3 = c1 / c2;*/
-    /*cout << "c3 = c1/c2 = " << c3 << endl;*/
-    /**/
+    if (RUN_DIVISION_TESTS) {
+        cout << (Complex(2,3) / Complex(-5, -2)) << " Should be -0.55-0.37i" << endl;
+
+        cout << (Complex(-2,-3) / Complex(5, 2)) << " Should be -0.55-0.37i" << endl;
+
+        cout << (Complex(6,3) / Complex(3, 0)) << " Should be 2+i" << endl;
+    }
     /*// exponentiation test*/
     if (RUN_EXPONENTIATION_TESTS) {
         cout << (Complex(2, 3)^0) << " Should be 1" << endl;
