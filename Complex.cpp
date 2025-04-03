@@ -15,6 +15,7 @@ using namespace std;
 //========================================================
 // default constructor
 // Initializes a default complex to have components of 0
+// Joel Singh
 //========================================================
 Complex::Complex() {
     a = 0;
@@ -29,6 +30,7 @@ Complex::Complex() {
 //  c: A Complex 
 // Return Value:
 //  none
+// Joel Singh
 //================================================= 
 Complex::Complex( const Complex& c )
 {
@@ -38,6 +40,7 @@ Complex::Complex( const Complex& c )
 
 //========================================================
 // Complex(a,b) constructor
+// Joel Singh
 //========================================================
 Complex::Complex(float real, float imaginary) {
     a = real;
@@ -51,6 +54,7 @@ Complex::Complex(float real, float imaginary) {
 //  none 
 // Return Value:
 //  none
+// Joel Singh
 //================================================= 
 Complex::~Complex ()
 {
@@ -63,6 +67,7 @@ Complex::~Complex ()
 //  r: the real number to set a to 
 // Return Value:
 //  Void
+// Joel Singh
 //================================================= 
 void Complex::setReal(float r) {
     a = r;
@@ -76,6 +81,7 @@ void Complex::setReal(float r) {
 //  None 
 // Return Value:
 //  Returns a, the real part
+// Joel Singh
 //================================================= 
 float Complex::getReal() const {
     return a;
@@ -88,6 +94,7 @@ float Complex::getReal() const {
 //  r: a float to set b 
 // Return Value:
 //  Void
+// Joel Singh
 //================================================= 
 void Complex::setImag(float r) {
     b = r;
@@ -100,6 +107,7 @@ void Complex::setImag(float r) {
 //  None 
 // Return Value:
 //  b, the imaginary part
+// Joel Singh
 //================================================= 
 float Complex::getImag() const {
     return b;
@@ -112,6 +120,7 @@ float Complex::getImag() const {
 //  c: The complex number to essentially copy 
 // Return Value:
 //  Complex
+// Joel Singh
 //================================================= 
 Complex Complex::operator= ( const Complex& c ) {
     a = c.a;
@@ -128,6 +137,7 @@ Complex Complex::operator= ( const Complex& c ) {
 //  i: An int
 // Return Value:
 //  Complex
+// Violet Eck
 //========================================================
 Complex Complex::operator+ (const Complex& c) const {
     return Complex(c.a + a, c.b + b);
@@ -147,6 +157,7 @@ Complex Complex::operator+ (int i) const {
 //  i: An int
 // Return Value:
 //  Complex
+// Violet Eck
 //========================================================
 Complex Complex::operator- (const Complex& c) const {
     return Complex(a - c.a, b - c.b);
@@ -164,6 +175,7 @@ Complex Complex::operator- (int i) const {
 //  none
 // Return Value:
 //  Complex
+// Violet Eck
 //========================================================
 Complex Complex::operator- () const {
     return Complex(-a,-b);
@@ -177,6 +189,7 @@ Complex Complex::operator- () const {
 //  i: An int
 // Return Value:
 //  Complex
+// Jamie Barber
 //========================================================
 Complex Complex::operator* (const Complex& c) const {
     return Complex(a * c.a - b * c.b, a * c.b + b * c.a);
@@ -196,6 +209,7 @@ Complex Complex::operator* (int i) const {
 //  i: An int
 // Return Value:
 //  Complex
+// Jamie Barber
 //========================================================
 Complex Complex::operator/ (const Complex& c) const {
     float denominator = c.a * c.a + c.b * c.b;
@@ -216,6 +230,7 @@ Complex Complex::operator/ (int i) const {
 //  p: int to raise to 
 // Return Value:
 //  returns a Complex
+// Joel Singh
 //================================================= 
 Complex Complex::operator^(int p) const {
     bool is_negative = p < 0;
@@ -246,6 +261,7 @@ Complex Complex::operator^(int p) const {
 //  none
 // Return Value:
 //  Complex
+// Violet Eck
 //========================================================
 Complex Complex::operator~() const {
     return Complex(a,-b);
@@ -257,6 +273,7 @@ Complex Complex::operator~() const {
 //  none
 // Return Value:
 //  double
+// Jamie Barber
 //========================================================
 float Complex::abs() const {
     return std::sqrt(a * a + b * b);
@@ -268,6 +285,7 @@ float Complex::abs() const {
 //  c: The other complex to compare 
 // Return Value:
 //  Boolean
+// Joel Singh
 //================================================= 
 bool Complex::operator== ( const Complex& c ) const {
     return a == c.a && b == c.b;
@@ -280,6 +298,7 @@ bool Complex::operator== ( const Complex& c ) const {
 //  c: The other complex to compare 
 // Return Value:
 //  bool
+// Joel Singh
 //================================================= 
 bool Complex::operator!= (const Complex& c ) const {
     return !(*this == c);
@@ -293,6 +312,7 @@ bool Complex::operator!= (const Complex& c ) const {
 //  c: The complex number being created
 // Return Value:
 //  Returns the istream object
+// Joel Singh
 // NOTES:
 //   Assumes non-erroneous input, (non-erroneous being what is descriibed in ComplexADT.pdf)
 //   Referenced https://en.cppreference.com/w/cpp/regex/regex_search for regex
@@ -358,6 +378,7 @@ istream& operator>> ( istream& is, Complex& c )
 //  r: The complex number to print
 // Return Value:
 //  Returns the ostream object
+// Joel Singh
 //================================================= 
 ostream& operator<< ( ostream& os, const Complex& c )
 {
